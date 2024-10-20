@@ -15,6 +15,7 @@ function Battle:nextTurn(...)
     super.nextTurn(self,...)
     if self.battle_ui then
         self.table_encounter_text_index = 1
+        self.table_encounter_text = {}
         if type(self.battle_ui.current_encounter_text) == "table" then
             self.table_encounter_text = self.battle_ui.current_encounter_text
             self.battle_ui.current_encounter_text = self.table_encounter_text[1]
